@@ -3,16 +3,22 @@ from django.shortcuts import render, HttpResponse
 
 posts = [
     {
-        'author' : 'Paul Walker', 
-        'title' : 'Making it look right ', 
-        'content' : 'Lorem ipsum finds people unawre',
-        'date_posted' : 'August 20th, 2000'
+        'title' : 'Project titlle', 
+        'location' : 'Netherlands ', 
+        'date_posted' : 'August 20, 2000',
+        'author' : 'author name',
     }, 
     {
-        'author' : 'jane Doe', 
-        'title' : 'Second Post',
-        'content' : 'I wish things would be better',
-        'date_posted' : 'May 16th, 2030'
+        'title' : 'Project tile', 
+        'location' : 'Sweden', 
+        'date_posted' : 'August 14, 1980',
+        'author' : 'author name',
+    },
+    {
+        'title' : 'Project title', 
+        'location' : 'Germany', 
+        'date_posted' : 'September 14, 2004',
+        'author' : 'author name',
     }
 ]
 
@@ -20,5 +26,5 @@ def home(request):
     data = {
         'posts' : posts
     }
-    
+
     return render (request, 'index.html', data)

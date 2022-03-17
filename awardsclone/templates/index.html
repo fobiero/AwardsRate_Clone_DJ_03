@@ -4,11 +4,36 @@
 <img src="{% static 'img/image.jpg' %}" alt="" class="hero-img">
 <!-- main content  -->
 <div class="container">
-    {% for post in posts %}
-    <h1>{{post.title}}</h1>
-    <h5>Posted by: {{post.author}} on {{post.date_posted}}</h5>
-    <p>{{post.content}}</p>
-    {% endfor %}
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'img/image.jpg' %}" alt="" class="hero-img-card">
+                <!-- card-body  -->
+                <div class="card-body">
+                    <h3>{{post.title}}</h3>
+                    <div class="plc">
+                        <div class="loc">
+                            <p>From {{post.}}</p>
+                        </div>
+                        <div class="dte">
+                            <p>{{post.date_posted}}</p>
+                        </div>
+                    </div>
+                    <div class="mre-info">
+                        <div class="by">
+                            <img src="{% static 'img/image.jpg' %}" alt="" class="profile-pic">
+                            <p>By {{post.author}}</p>
+                        </div>
+                        <div class="rate">
+                            <a href="">Rate Site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 <!-- end for  -->
 {% endblock content %}
