@@ -1,13 +1,14 @@
-{% extends 'base.html' %}
-
+ {% extends 'base.html' %} {% load static %}
 <!-- content  -->
 {% block content %}
+<img src="{% static 'img/image.jpg' %}" alt="" class="wrapper-img">
 <!-- main content  -->
-
-{% for post in posts %}
-<h1>{{post.title}}</h1>
-<h5>Posted by: {{post.author}} on {{post.date_posted}}</h5>
-<p>{{post.content}}</p>
-{% endfor %}
+<div class="container">
+    {% for post in posts %}
+    <h1>{{post.title}}</h1>
+    <h5>Posted by: {{post.author}} on {{post.date_posted}}</h5>
+    <p>{{post.content}}</p>
+    {% endfor %}
+</div>
 <!-- end for  -->
 {% endblock content %}
