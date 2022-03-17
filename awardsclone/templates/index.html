@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
 
 <!-- content  -->
-{% block content %} getting started {% endblock content %}
+{% block content %}
+<!-- main content  -->
+
+{% for post in posts %}
+<h1>{{post.title}}</h1>
+<h5>Posted by: {{post.author}} on {{post.date_posted}}</h5>
+<p>{{post.content}}</p>
+{% endfor %}
+<!-- end for  -->
+{% endblock content %}
