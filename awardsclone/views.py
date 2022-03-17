@@ -3,13 +3,13 @@ from django.shortcuts import render, HttpResponse
 
 posts = [
     {
-        'title' : 'Project titlle', 
+        'title' : 'Project title', 
         'location' : 'Netherlands ', 
         'date_posted' : 'August 20, 2000',
         'author' : 'author name',
     }, 
     {
-        'title' : 'Project tile', 
+        'title' : 'Project title', 
         'location' : 'Sweden', 
         'date_posted' : 'August 14, 1980',
         'author' : 'author name',
