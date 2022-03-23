@@ -1,5 +1,5 @@
 
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, HttpResponse
 from .models import *
 
 posts = [
@@ -24,11 +24,8 @@ posts = [
 ]
 
 def home(request):
-    data = {
-        'posts' : posts
-    }
+    return HttpResponse(request, 'gettin started')
 
-    return render(request,'index.html',{"data":data})
 
 # def home(request):
 #     data = {
@@ -37,8 +34,3 @@ def home(request):
 
 #     return render(request, 'index.html', data)
 
-def register(request):
-    return render(request, 'register.html')
-
-def login(request):
-    return render(request, 'login.html')
