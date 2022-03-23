@@ -22,11 +22,11 @@ posts = [
     }
 ]
 
-def home(request):
-    data = {
-        'posts' : posts
-    }
-    return render(request, 'index.html', data)
+# def home(request):
+#     data = {
+#         'posts' : posts
+#     }
+#     return render(request, 'index.html', data)
 
 def register(request):
     return render(request, 'register.html')
