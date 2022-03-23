@@ -24,13 +24,4 @@ posts = [
 ]
 
 def home(request):
-    return HttpResponse(request, 'gettin started')
-
-
-# def home(request):
-#     data = {
-#         'posts' : posts
-#     }
-
-#     return render(request, 'index.html', data)
-
+    return render(request,'index.html')
