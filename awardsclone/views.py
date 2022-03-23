@@ -1,5 +1,6 @@
 
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import *
 
 posts = [
     {
@@ -22,10 +23,18 @@ posts = [
     }
 ]
 
+def home(request):
+    data = {
+        'posts' : posts
+    }
+
+    return render(request,'index.html',{"data":data})
+
 # def home(request):
 #     data = {
 #         'posts' : posts
 #     }
+
 #     return render(request, 'index.html', data)
 
 def register(request):
