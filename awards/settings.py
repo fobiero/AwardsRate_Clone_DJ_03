@@ -30,8 +30,7 @@ if config('MODE')=="dev":
            'PASSWORD': config('DB_PASSWORD'),
            'HOST': config('DB_HOST'),
            'PORT': '',
-       }
-       
+       }   
    }
 # production
 else:
@@ -44,7 +43,7 @@ else:
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv()) 
 
 # end added files 
 
@@ -56,9 +55,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'awardskey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -88,7 +87,7 @@ ROOT_URLCONF = 'awards.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'ENGINE': 'django.db.backends.postgresql',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -108,15 +107,15 @@ WSGI_APPLICATION = 'awards.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'awards',
-        'USER': 'moringa',
-        'PASSWORD': 'root',
-        'HOST':'localhost',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'awards',
+#         'USER': 'moringa',
+#         'PASSWORD': 'root',
+#         'HOST':'',
+#     }
+# }
 
 
 # Password validation
