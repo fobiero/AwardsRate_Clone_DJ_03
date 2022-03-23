@@ -10,8 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
@@ -19,7 +19,6 @@ from decouple import config,Csv
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG', False)
-# DEBUG = config('DEBUG', default=False, cast=bool)
 # development
 if config('MODE')=="dev":
    DATABASES = {
@@ -52,7 +51,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'awardskey'
+# SECRET_KEY = 'awardskey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
