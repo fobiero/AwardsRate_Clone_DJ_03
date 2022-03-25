@@ -64,7 +64,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'awardsclone.apps.AwardscloneConfig',
     'awwardapp',
     'bootstrap5',
     'cloudinary', 
