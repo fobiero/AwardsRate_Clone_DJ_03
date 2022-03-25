@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'awardsclone.apps.AwardscloneConfig',
+    'awardsclone.apps.AwardscloneConfig',
     'awwardapp',
     'bootstrap5',
     'cloudinary', 
@@ -85,8 +85,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'awards.urls'
 
 TEMPLATES = [
-    {
-        'ENGINE': 'django.db.backends.postgresql',
+    {   
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -101,7 +101,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'awards.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
