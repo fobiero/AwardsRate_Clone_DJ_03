@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'cloudinary', 
     'rest_framework',
+    'rest_framework.authtoken', #this needs to be added
 ]
 
 MIDDLEWARE = [
