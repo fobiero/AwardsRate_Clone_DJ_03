@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load bootstrap5%}
+{% block content %}
+<div class="container">
+    <div class="card border-0 shadow my-5">
+      <div class="card-body p-5" style="background: url('static/image/bg.jpg'); height:100%;">
+        <h1 class="fw-light text-center">Awwards</h1>
+        <p class="text-center">Welcome to Awward applcation where you can you
+            will allow post a project that you have  created and get it reviewed by your peers.
+        </p>
+        <div class="lead mb-0">
+            <input type="submit" class="btn btn-primary btn-lg" value="view site" />
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+        {% for project in projects %}
+        <div class="card col-md-4">
+            <h1 style="text-align: center; text-transform:uppercase;"> {{project.title}} </h1>
+            <a href="/singleproject/{{project.id}}">
+            <img class="card-img-top img-fluid" style="width:600px;" src=" {{project.image.url}}" alt="{{post.title}}"></a>
+            <div class="card-body" style="text-align: center;">
+                <h4 class="card-title"> {{project.description}}</h4>
+                <a style="text-align: center;" href=" {{project.link}} "> {{project.link}} </a>
+                <p class="card-text" style="align-content: center;"><b>Posted by:</b> {{project.user}} </p>
+                <a style="text-align: center;" href="{%url 'comment' project.id%}" class="btn btn-primary">Review</a>
+                <a style="text-align: center;" href="{%url 'rates' project.id%}" class="btn btn-primary">Rate</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
