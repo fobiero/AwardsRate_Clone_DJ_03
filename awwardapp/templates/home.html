@@ -23,16 +23,15 @@
                         <img class="card-img-top img-fluid" style="width:600px;" src=" {{project.image.url}}" alt="{{post.title}}">
                     </a>
                     <p class="text-muted">{{project.description}}</p>
+                    <a style="text-align: center;" href=" {{project.link}} "> {{project.link}} </a>
                 </div>
                 <div class="card-footer" style="display: inline-flex;">
-                    <div class="ft-info">
-                        <a style="text-align: center;" href=" {{project.link}} "> {{project.link}} </a>
-                        <p class="pst-by">PostBy:{{project.user}} </p>
-                    </div>
-                    <div class="review">
-                        <a style="text-align: center;" href="{%url 'comment' project.id%}" class="btn btn-outline-light">Review</a>
-                        <a style="text-align: center;" href="{%url 'rates' project.id%}" class="btn btn-outline-info">Rate</a>
-                    </div>
+                    <!-- <div class="ft-info"> -->
+                    <!-- <a style="text-align: center;" href=" {{project.link}} "> {{project.link}} </a> -->
+                    <p class="pst-by">PostBy:{{project.user}} </p>
+                    <a style="text-align: center;" href="{%url 'comment' project.id%}" class="btn btn-outline-primary">Review</a>
+                    <a style="text-align: center;" href="{%url 'rates' project.id%}" class="btn btn-outline-info">Rate</a>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
