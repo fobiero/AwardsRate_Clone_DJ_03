@@ -138,7 +138,6 @@ def rate(request,id):
             messages.info(request,'Input all fields')
             return redirect('singleproject',id)
 
-
     else:
         messages.info(request,'Input all fields')
         return redirect('singleproject',id)
